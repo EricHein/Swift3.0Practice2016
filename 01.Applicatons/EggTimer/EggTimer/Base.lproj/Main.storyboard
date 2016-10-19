@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EggTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibQ-FR-NHw">
+                                <items>
+                                    <navigationItem title="Egg Timer" id="S9q-qP-TAO"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQG-66-cp4">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="wbI-O4-m1i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="75"/>
+                                <color key="textColor" red="1" green="0.44780240799999999" blue="0.51897397010000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8f-DV-5NR">
+                                <color key="backgroundColor" red="1" green="0.44780240799999999" blue="0.51897397010000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gLm-TD-dCI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Pause">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseTimerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vc9-k6-dQd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlj-HZ-BXq">
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="19X-Qc-vea"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Abg-TZ-giZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y31-Dw-1hi">
+                                <color key="backgroundColor" red="0.15686274510000001" green="0.72549019609999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hGu-Y1-INc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startTimerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GSD-0i-WoZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hlj-HZ-BXq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="96" id="18l-wg-Nxu"/>
+                            <constraint firstAttribute="trailing" secondItem="ibQ-FR-NHw" secondAttribute="trailing" id="2Bg-dv-LJ2"/>
+                            <constraint firstItem="RQG-66-cp4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="21" id="52I-kS-U4d"/>
+                            <constraint firstItem="y31-Dw-1hi" firstAttribute="top" secondItem="D8f-DV-5NR" secondAttribute="bottom" constant="-40" id="6Sk-49-NmU"/>
+                            <constraint firstAttribute="bottom" secondItem="y31-Dw-1hi" secondAttribute="bottom" constant="20" symbolic="YES" id="9wC-Fa-XfF"/>
+                            <constraint firstItem="ibQ-FR-NHw" firstAttribute="centerX" secondItem="RQG-66-cp4" secondAttribute="centerX" id="Ba6-eA-Ukf"/>
+                            <constraint firstItem="D8f-DV-5NR" firstAttribute="leading" secondItem="y31-Dw-1hi" secondAttribute="leading" id="Edf-Iz-kgu"/>
+                            <constraint firstItem="hlj-HZ-BXq" firstAttribute="leading" secondItem="D8f-DV-5NR" secondAttribute="leading" id="Ka9-XP-w8t"/>
+                            <constraint firstItem="ibQ-FR-NHw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="R2R-Db-kpG"/>
+                            <constraint firstItem="D8f-DV-5NR" firstAttribute="trailing" secondItem="y31-Dw-1hi" secondAttribute="trailing" id="iED-zW-3RP"/>
+                            <constraint firstItem="hlj-HZ-BXq" firstAttribute="top" secondItem="RQG-66-cp4" secondAttribute="bottom" constant="8" symbolic="YES" id="jev-bg-6Q1"/>
+                            <constraint firstItem="hlj-HZ-BXq" firstAttribute="trailing" secondItem="D8f-DV-5NR" secondAttribute="trailing" id="ny9-yd-eRp"/>
+                            <constraint firstItem="RQG-66-cp4" firstAttribute="centerX" secondItem="hlj-HZ-BXq" secondAttribute="centerX" id="qmE-15-8DZ"/>
+                            <constraint firstItem="ibQ-FR-NHw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rKo-CM-gqU"/>
+                            <constraint firstItem="RQG-66-cp4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vma-5M-yRY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pauseButton" destination="D8f-DV-5NR" id="Mhl-gv-zMp"/>
+                        <outlet property="resetButton" destination="hlj-HZ-BXq" id="HQB-Ye-oxf"/>
+                        <outlet property="startButton" destination="y31-Dw-1hi" id="QMd-an-Vsn"/>
+                        <outlet property="timerLabel" destination="RQG-66-cp4" id="b23-2d-L1j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
