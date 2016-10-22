@@ -1,20 +1,27 @@
 //
 //  ViewController.swift
-//  FindingTheUserLocation
+//  LocationAware
 //
-//  Created by Eric H on 16/10/2016.
+//  Created by Eric H on 21/10/2016.
 //  Copyright © 2016 FabledRealm. All rights reserved.
 //
 
 import UIKit
 import CoreLocation
-import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate {
 
-    @IBOutlet var map: MKMapView!
+    
+    @IBOutlet var latitudeLabel: UILabel!
+    @IBOutlet var longitudeLabel: UILabel!
+    @IBOutlet var courseLabel: UILabel!
+    @IBOutlet var speedLabel: UILabel!
+    @IBOutlet var altitudeLabel: UILabel!
+    @IBOutlet var nearestAddressLabel: UILabel!
+    
     
     var locationManager = CLLocationManager()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,27 +30,31 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        
-    
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocation: CLLocation = locations[0]
         
-        /*
-        let latitude = userLocation.coordinate.latitude
         
-        let longitude = userLocation.coordinate.longitude
+        latitudeLabel.text = "Latitude: " + String(userLocation.coordinate.latitude)
         
-        let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        */
+        longitudeLabel.text = "Longitude: " + String(userLocation.coordinate.longitude)
+        
+        courseLabel.text = "Course: " + String(userLocation.course)
+        
+        speedLabel.text = "Speed: " + String(userLocation.speed)
+        
+        altitudeLabel.text = "Altitude: " + String(userLocation.altitude)
+        
+        
         
         CLGeocoder().reverseGeocodeLocation(userLocation) {(placemarks, error) in
-         
+            
             if error != nil{
                 print(error)
                 
@@ -87,7 +98,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                         country = placemark.country!
                     }
                     
+                    let string1 = String(subThoroughFare + thoroughFare + "\n" + subLocality + sumAdminArea + "\n" + postalCode + "\n" + country)
                     
+                    self.nearestAddressLabel.text = string1
                     
                     print(subThoroughFare + thoroughFare + "\n" + subLocality + sumAdminArea + "\n" + postalCode + "\n" + country)
                 }
@@ -95,7 +108,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             }
             
         }
+        
     }
+
 
 }
 
