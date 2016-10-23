@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AdvancedSegues" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZC4-e5-yfM">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="I75-rR-nqV"/>
+                                    <constraint firstAttribute="width" constant="100" id="QVX-Bm-hjo"/>
+                                </constraints>
+                                <state key="normal" title="To 2nd"/>
+                                <connections>
+                                    <segue destination="921-7J-eI7" kind="presentation" identifier="VC2Segue" id="4ux-3Q-bzM"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rnz-R9-jKq">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="3PL-hJ-Ohq">
+                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3PL-hJ-Ohq" id="2ei-Gl-mGD">
+                                            <frame key="frameInset" width="240" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="921-7J-eI7" kind="presentation" identifier="VC2SegueFromCell" id="Ds3-zW-eg4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="kUr-9K-6BM"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="6E2-nh-p1l"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZC4-e5-yfM" firstAttribute="centerX" secondItem="rnz-R9-jKq" secondAttribute="centerX" id="3LL-aF-Cw2"/>
+                            <constraint firstItem="ZC4-e5-yfM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IJz-Y2-H8y"/>
+                            <constraint firstItem="rnz-R9-jKq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="LbO-Hk-vbd"/>
+                            <constraint firstAttribute="bottom" secondItem="rnz-R9-jKq" secondAttribute="bottom" constant="20" symbolic="YES" id="WPG-3D-zH1"/>
+                            <constraint firstItem="ZC4-e5-yfM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="j5D-Q8-xr8"/>
+                            <constraint firstItem="rnz-R9-jKq" firstAttribute="top" secondItem="ZC4-e5-yfM" secondAttribute="bottom" constant="8" symbolic="YES" id="oh0-yj-CfI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-180" y="168.6656671664168"/>
+        </scene>
+        <!--VC2-->
+        <scene sceneID="NLf-fZ-F3R">
+            <objects>
+                <viewController id="921-7J-eI7" customClass="VC2" customModule="AdvancedSegues" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="54J-pX-QHA"/>
+                        <viewControllerLayoutGuide type="bottom" id="hy6-jk-Ocl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="obg-Ym-ICa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkZ-kI-QMD">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="6MC-BW-opn"/>
+                                </constraints>
+                                <state key="normal" title="To 1st"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="VC1Segue" id="NwN-5X-mPI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dkZ-kI-QMD" firstAttribute="centerX" secondItem="obg-Ym-ICa" secondAttribute="centerX" id="1Jh-Qt-Pgl"/>
+                            <constraint firstItem="dkZ-kI-QMD" firstAttribute="top" secondItem="54J-pX-QHA" secondAttribute="bottom" id="U2H-Mx-4T2"/>
+                            <constraint firstItem="hy6-jk-Ocl" firstAttribute="top" secondItem="dkZ-kI-QMD" secondAttribute="bottom" constant="607" id="Via-cB-J67"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JC1-Ff-9Ra" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="139"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ds3-zW-eg4"/>
+    </inferredMetricsTieBreakers>
+</document>
