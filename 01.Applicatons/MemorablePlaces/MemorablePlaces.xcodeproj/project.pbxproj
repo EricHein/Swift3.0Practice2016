@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		41B992361DBC464C00A5EF98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B992351DBC464C00A5EF98 /* AppDelegate.swift */; };
-		41B992381DBC464C00A5EF98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B992371DBC464C00A5EF98 /* ViewController.swift */; };
 		41B9923B1DBC464D00A5EF98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41B992391DBC464D00A5EF98 /* Main.storyboard */; };
 		41B9923D1DBC464D00A5EF98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41B9923C1DBC464D00A5EF98 /* Assets.xcassets */; };
 		41B992401DBC464D00A5EF98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41B9923E1DBC464D00A5EF98 /* LaunchScreen.storyboard */; };
+		41B992481DBCB15800A5EF98 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B992471DBCB15800A5EF98 /* Constants.swift */; };
+		41B9924A1DBCB1D700A5EF98 /* AddPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B992491DBCB1D700A5EF98 /* AddPlaceVC.swift */; };
+		41B9924C1DBCB1E800A5EF98 /* ViewPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B9924B1DBCB1E800A5EF98 /* ViewPlaceVC.swift */; };
+		41B9924E1DBCB9E300A5EF98 /* PlacesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B9924D1DBCB9E300A5EF98 /* PlacesVC.swift */; };
+		41B992511DBCF19600A5EF98 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B992501DBCF19600A5EF98 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		41B992321DBC464C00A5EF98 /* MemorablePlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemorablePlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41B992351DBC464C00A5EF98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		41B992371DBC464C00A5EF98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		41B9923A1DBC464D00A5EF98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41B9923C1DBC464D00A5EF98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41B9923F1DBC464D00A5EF98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41B992411DBC464D00A5EF98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41B992471DBCB15800A5EF98 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		41B992491DBCB1D700A5EF98 /* AddPlaceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlaceVC.swift; sourceTree = "<group>"; };
+		41B9924B1DBCB1E800A5EF98 /* ViewPlaceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPlaceVC.swift; sourceTree = "<group>"; };
+		41B9924D1DBCB9E300A5EF98 /* PlacesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesVC.swift; sourceTree = "<group>"; };
+		41B992501DBCF19600A5EF98 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41B992511DBCF19600A5EF98 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,7 @@
 			children = (
 				41B992341DBC464C00A5EF98 /* MemorablePlaces */,
 				41B992331DBC464C00A5EF98 /* Products */,
+				41B9924F1DBCF19600A5EF98 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +65,24 @@
 			isa = PBXGroup;
 			children = (
 				41B992351DBC464C00A5EF98 /* AppDelegate.swift */,
-				41B992371DBC464C00A5EF98 /* ViewController.swift */,
+				41B992471DBCB15800A5EF98 /* Constants.swift */,
+				41B9924D1DBCB9E300A5EF98 /* PlacesVC.swift */,
+				41B992491DBCB1D700A5EF98 /* AddPlaceVC.swift */,
+				41B9924B1DBCB1E800A5EF98 /* ViewPlaceVC.swift */,
 				41B992391DBC464D00A5EF98 /* Main.storyboard */,
 				41B9923C1DBC464D00A5EF98 /* Assets.xcassets */,
 				41B9923E1DBC464D00A5EF98 /* LaunchScreen.storyboard */,
 				41B992411DBC464D00A5EF98 /* Info.plist */,
 			);
 			path = MemorablePlaces;
+			sourceTree = "<group>";
+		};
+		41B9924F1DBCF19600A5EF98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41B992501DBCF19600A5EF98 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +158,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41B992381DBC464C00A5EF98 /* ViewController.swift in Sources */,
+				41B9924E1DBCB9E300A5EF98 /* PlacesVC.swift in Sources */,
+				41B9924C1DBCB1E800A5EF98 /* ViewPlaceVC.swift in Sources */,
 				41B992361DBC464C00A5EF98 /* AppDelegate.swift in Sources */,
+				41B9924A1DBCB1D700A5EF98 /* AddPlaceVC.swift in Sources */,
+				41B992481DBCB15800A5EF98 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +228,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -247,7 +271,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
