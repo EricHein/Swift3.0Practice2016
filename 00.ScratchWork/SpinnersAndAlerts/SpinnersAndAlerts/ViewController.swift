@@ -57,6 +57,8 @@ class ViewController: UIViewController {
         view.addSubview(activityIndicatior)
         
         activityIndicatior.startAnimating()
+      
+ 
         
         //UIApplication.shared.beginIgnoringInteractionEvents()
     }
