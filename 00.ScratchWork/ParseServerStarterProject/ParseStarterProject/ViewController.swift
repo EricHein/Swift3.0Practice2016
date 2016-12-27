@@ -30,6 +30,15 @@ class ViewController: UIViewController {
         
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if PFUser.current() != nil{
+            
+            self.performSegue(withIdentifier: "showUserTable", sender: self)
+        }
+        
+        self.navigationController?.navigationBar.isHidden = true
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -88,6 +97,7 @@ class ViewController: UIViewController {
                         self.createAlert(title: "Sign Up Error", message: displayErrorMessage)
                     }else{
                         print("User Signed Up")
+                        self.performSegue(withIdentifier: "showUserTable", sender: self)
                     }
                     
                 })
@@ -111,6 +121,7 @@ class ViewController: UIViewController {
                         
                     }else{
                         print("Logged In")
+                        self.performSegue(withIdentifier: "showUserTable", sender: self)
                     }
                     
                     
